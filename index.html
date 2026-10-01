@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo jQuery — Aprenda na prática</title>
+
+  <!-- Fontes: Poppins (texto) + JetBrains Mono (códigos) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== Barra de navegação fixa ===== -->
+  <nav class="navbar">
+    <div class="container nav-conteudo">
+      <a href="index.html" class="nav-logo">⚡ jQuery<span>.demo</span></a>
+
+      <div class="nav-links">
+        <a href="index.html" class="ativo">Demonstração</a>
+        <a href="passos.html">Passo a passo</a>
+      </div>
+
+      <button id="tema" class="btn btn-nav">🌙 Modo escuro</button>
+    </div>
+  </nav>
+
+  <!-- ===== Hero ===== -->
+  <header class="hero" id="inicio">
+    <div class="container">
+      <span class="badge">⚡ write less, do more</span>
+      <h1>Demonstração prática de <span class="destaque">jQuery</span></h1>
+      <p>A biblioteca JavaScript que simplificou o desenvolvimento web: manipulação de conteúdo, efeitos, eventos e formulários — tudo em poucas linhas de código.</p>
+
+      <div class="hero-stats">
+        <div class="stat"><b>2006</b><span>ano de criação, por John Resig</span></div>
+        <div class="stat"><b>3.7.1</b><span>versão estável atual</span></div>
+        <div class="stat"><b>MIT</b><span>licença open source</span></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- ====== Seção: Demonstração ====== -->
+    <div id="demonstracao" class="secao-titulo">
+      <h2>🧪 Demonstração</h2>
+    </div>
+
+    <section class="card">
+      <div class="card-topo">
+        <span class="numero">01</span>
+        <div>
+          <h2>Manipular conteúdo</h2>
+          <p class="desc">Troque textos e estilos com <code>.text()</code> e <code>.css()</code>.</p>
+        </div>
+      </div>
+      <p id="frase" class="frase">Este texto vai mudar quando você clicar no botão.</p>
+      <button id="btn-texto" class="btn btn-primario">Mudar texto</button>
+    </section>
+
+    <section class="card">
+      <div class="card-topo">
+        <span class="numero">02</span>
+        <div>
+          <h2>Efeitos e animações</h2>
+          <p class="desc">Animações suaves com <code>.slideToggle()</code>.</p>
+        </div>
+      </div>
+      <button id="btn-slide" class="btn btn-primario">Mostrar / ocultar painel</button>
+      <div id="painel">Eu apareço e desapareço suavemente! ✨</div>
+    </section>
+
+    <section class="card">
+      <div class="card-topo">
+        <span class="numero">03</span>
+        <div>
+          <h2>Lista dinâmica</h2>
+          <p class="desc">Adicione com <code>.append()</code> e remova clicando (com <code>.fadeOut()</code>).</p>
+        </div>
+      </div>
+      <div class="linha">
+        <input type="text" id="item" class="campo" placeholder="Digite um item…">
+        <button id="btn-add" class="btn btn-primario">Adicionar</button>
+      </div>
+      <ul id="lista"></ul>
+    </section>
+
+    <section class="card">
+      <div class="card-topo">
+        <span class="numero">04</span>
+        <div>
+          <h2>Formulário</h2>
+          <p class="desc">Leia valores com <code>.val()</code>.</p>
+        </div>
+      </div>
+      <div class="linha">
+        <input type="text" id="nome" class="campo" placeholder="Seu nome…">
+        <button id="btn-ola" class="btn btn-primario">Dizer olá</button>
+      </div>
+      <p id="saudacao"></p>
+    </section>
+
+  </main>
+
+  <!-- ===== Rodapé ===== -->
+  <footer class="rodape">
+    <div class="container">
+      <div class="rodape-topo">
+        <a href="index.html" class="nav-logo">⚡ jQuery<span>.demo</span></a>
+        <nav class="rodape-nav">
+          <a href="index.html">Demonstração</a>
+          <a href="passos.html">Passo a passo</a>
+        </nav>
+      </div>
+      <hr class="divisor">
+      <p>© 2025 · Projeto educacional — Desenvolvido por <strong>Raissa Landes e Junifher Firmino</strong></p>
+      <p class="credito">jQuery é uma biblioteca criada por John Resig em 2006, sob licença MIT.</p>
+    </div>
+  </footer>
+
+  <!-- Botão voltar ao topo -->
+  <a href="#inicio" class="btn-topo" title="Voltar ao topo">↑</a>
+
+  <!-- ⚠️ NÃO REMOVA! O jQuery precisa estar aqui para o código funcionar -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

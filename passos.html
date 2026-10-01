@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Passo a passo — Demo jQuery</title>
+
+  <!-- Fontes: Poppins (texto) + JetBrains Mono (códigos) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== Barra de navegação fixa ===== -->
+  <nav class="navbar">
+    <div class="container nav-conteudo">
+      <a href="index.html" class="nav-logo">⚡ jQuery<span>.demo</span></a>
+
+      <div class="nav-links">
+        <a href="index.html">Demonstração</a>
+        <a href="passos.html" class="ativo">Passo a passo</a>
+      </div>
+
+      <button id="tema" class="btn btn-nav">🌙 Modo escuro</button>
+    </div>
+  </nav>
+
+  <!-- ===== Hero (compacto) ===== -->
+  <header class="hero hero-min" id="inicio">
+    <div class="container">
+      <span class="badge">📋 roteiro da aula</span>
+      <h1>Passo a <span class="destaque">passo</span></h1>
+      <p>O código jQuery por trás de cada demonstração: entenda o que cada bloco faz antes de descomentá-lo no <code>script.js</code>.</p>
+    </div>
+  </header>
+
+  <main class="container">
+
+
+    <!-- ====== Antes de começar ====== -->
+    <div class="secao-titulo">
+      <h2>⚙️ Antes de começar</h2>
+    </div>
+
+    <section class="card">
+      <div class="card-topo">
+        <span class="numero">⚡</span>
+        <div>
+          <h2>O ponto de partida</h2>
+          <p class="desc">Todo o código fica dentro do <code>$(document).ready()</code>.</p>
+        </div>
+      </div>
+      <p class="explica">Esse método espera o HTML carregar por completo antes de executar o JavaScript. Sem ele, o código poderia rodar antes dos botões existirem na página — e nada funcionaria.</p>
+
+      <div class="codigo-box">
+        <div class="codigo-barra">
+          <span class="dot dot-v"></span><span class="dot dot-a"></span><span class="dot dot-g"></span>
+          <span class="codigo-nome">script.js — base</span>
+          <button class="btn-copiar">📋 Copiar</button>
+        </div>
+        <pre><code><span class="c">// Espera o HTML carregar antes de executar o código</span>
+<span class="j">$(document)</span>.ready(<span class="k">function</span> () {
+
+  <span class="c">// todo o código jQuery fica aqui dentro</span>
+
+});</code></pre>
+      </div>
+    </section>
+
+    <!-- ====== Os 5 tópicos ====== -->
+    <div class="secao-titulo">
+      <h2>📋 Os 5 tópicos</h2>
+    </div>
+
+    <!-- TÓPICO 1 -->
+    <section class="card">
+      <div class="card-topo">
+        <span class="numero">1</span>
+        <div>
+          <h2>Manipular conteúdo</h2>
+          <p class="desc">Métodos usados: <code>.click()</code> e <code>.text()</code></p>
+        </div>
+      </div>
+      <p class="explica">O padrão do jQuery é sempre o mesmo: <strong>selecione e aja</strong>. Aqui, <code>$("#frase")</code> encontra o parágrafo pelo id e <code>.text()</code> troca o conteúdo quando o botão é clicado. Para mudar estilos, o caminho é parecido: <code>$("#frase").css("color", "blue")</code>.</p>
+
+      <div class="codigo-box">
+        <div class="codigo-barra">
+          <span class="dot dot-v"></span><span class="dot dot-a"></span><span class="dot dot-g"></span>
+          <span class="codigo-nome">script.js — bloco 1</span>
+          <button class="btn-copiar">📋 Copiar</button>
+        </div>
+        <pre><code><span class="j">$("#btn-texto")</span>.click(<span class="k">function</span> () {
+  <span class="j">$("#frase")</span>.text(<span class="s">"Texto alterado com jQuery! 🎉 O método .text() fez isso em uma linha."</span>);
+});</code></pre>
+      </div>
+    </section>
+
+    <!-- TÓPICO 2 -->
+    <section class="card">
+      <div class="card-topo">
+        <span class="numero">2</span>
+        <div>
+          <h2>Efeitos e animações</h2>
+          <p class="desc">Método usado: <code>.slideToggle()</code></p>
+        </div>
+      </div>
+      <p class="explica">O <code>.slideToggle(400)</code> alterna entre mostrar e esconder o painel com uma animação de 400 milissegundos. É a família de efeitos mais famosa do jQuery: também existem <code>.fadeIn()</code>, <code>.fadeOut()</code>, <code>.slideUp()</code>, <code>.slideDown()</code> e <code>.animate()</code>.</p>
+
+      <div class="codigo-box">
+        <div class="codigo-barra">
+          <span class="dot dot-v"></span><span class="dot dot-a"></span><span class="dot dot-g"></span>
+          <span class="codigo-nome">script.js — bloco 2</span>
+          <button class="btn-copiar">📋 Copiar</button>
+        </div>
+        <pre><code><span class="j">$("#btn-slide")</span>.click(<span class="k">function</span> () {
+  <span class="j">$("#painel")</span>.slideToggle(<span class="n">400</span>);
+});</code></pre>
+      </div>
+    </section>
+
+    <!-- TÓPICO 3 -->
+    <section class="card">
+      <div class="card-topo">
+        <span class="numero">3</span>
+        <div>
+          <h2>Lista dinâmica</h2>
+          <p class="desc">Métodos usados: <code>.val()</code>, <code>.append()</code>, <code>.on()</code> e <code>.fadeOut()</code></p>
+        </div>
+      </div>
+      <p class="explica">O <code>.val()</code> lê o que foi digitado no campo, e o <code>.append()</code> insere o novo item <code>&lt;li&gt;</code> na lista. O <code>.on("click", "li", ...)</code> usa <strong>delegação de eventos</strong>: funciona até nos itens criados depois. E o <code>.keydown()</code> faz a tecla Enter também adicionar.</p>
+
+      <div class="codigo-box">
+        <div class="codigo-barra">
+          <span class="dot dot-v"></span><span class="dot dot-a"></span><span class="dot dot-g"></span>
+          <span class="codigo-nome">script.js — bloco 3</span>
+          <button class="btn-copiar">📋 Copiar</button>
+        </div>
+        <pre><code><span class="j">$("#btn-add")</span>.click(adicionar);
+<span class="j">$("#item")</span>.keydown(<span class="k">function</span> (e) {
+  <span class="k">if</span> (e.key === <span class="s">"Enter"</span>) adicionar();
+});
+
+<span class="k">function</span> adicionar() {
+  <span class="k">const</span> texto = <span class="j">$("#item")</span>.val().trim();
+  <span class="k">if</span> (texto !== <span class="s">""</span>) {
+    <span class="j">$("#lista")</span>.append($(<span class="s">"&lt;li&gt;"</span>).text(texto));
+    <span class="j">$("#item")</span>.val(<span class="s">""</span>).focus();
+  }
+}
+
+<span class="c">// remove o item ao clicar nele</span>
+<span class="j">$("#lista")</span>.on(<span class="s">"click"</span>, <span class="s">"li"</span>, <span class="k">function</span> () {
+  $(<span class="k">this</span>).fadeOut(<span class="n">300</span>, <span class="k">function</span> () {
+    $(<span class="k">this</span>).remove();
+  });
+});</code></pre>
+      </div>
+    </section>
+
+    <!-- TÓPICO 4 -->
+    <section class="card">
+      <div class="card-topo">
+        <span class="numero">4</span>
+        <div>
+          <h2>Formulário</h2>
+          <p class="desc">Métodos usados: <code>.val()</code>, <code>.addClass()</code> e <code>.removeClass()</code></p>
+        </div>
+      </div>
+      <p class="explica">O <code>.val()</code> lê o nome digitado. Se o campo estiver vazio, trocamos as classes do feedback — o CSS pinta de vermelho; se tiver nome, pintamos de verde. Repare no <strong>encadeamento</strong>: como todo método jQuery retorna o próprio objeto, dá para chamar vários em sequência.</p>
+
+      <div class="codigo-box">
+        <div class="codigo-barra">
+          <span class="dot dot-v"></span><span class="dot dot-a"></span><span class="dot dot-g"></span>
+          <span class="codigo-nome">script.js — bloco 4</span>
+          <button class="btn-copiar">📋 Copiar</button>
+        </div>
+        <pre><code><span class="j">$("#btn-ola")</span>.click(<span class="k">function</span> () {
+  <span class="k">const</span> nome = <span class="j">$("#nome")</span>.val().trim();
+  <span class="k">if</span> (nome === <span class="s">""</span>) {
+    <span class="j">$("#saudacao")</span>.removeClass(<span class="s">"ok"</span>).addClass(<span class="s">"erro"</span>).text(<span class="s">"⚠️ Digite seu nome!"</span>);
+  } <span class="k">else</span> {
+    <span class="j">$("#saudacao")</span>.removeClass(<span class="s">"erro"</span>).addClass(<span class="s">"ok"</span>).text(<span class="s">"Olá, "</span> + nome + <span class="s">"! 😄"</span>);
+  }
+});</code></pre>
+      </div>
+    </section>
+
+    <!-- TÓPICO 5 -->
+    <section class="card">
+      <div class="card-topo">
+        <span class="numero">5</span>
+        <div>
+          <h2>Modo escuro</h2>
+          <p class="desc">Métodos usados: <code>.toggleClass()</code> e <code>.hasClass()</code></p>
+        </div>
+      </div>
+      <p class="explica">O <code>.toggleClass("escuro")</code> liga ou desliga a classe no <code>&lt;body&gt;</code>. Como todas as cores do site são variáveis CSS, o tema inteiro muda de uma vez — o JavaScript só alterna a classe, quem pinta é o CSS. O <code>.hasClass()</code> apenas verifica se a classe está aplicada.</p>
+
+      <div class="codigo-box">
+        <div class="codigo-barra">
+          <span class="dot dot-v"></span><span class="dot dot-a"></span><span class="dot dot-g"></span>
+          <span class="codigo-nome">script.js — bloco 5</span>
+          <button class="btn-copiar">📋 Copiar</button>
+        </div>
+        <pre><code><span class="j">$("#tema")</span>.click(<span class="k">function</span> () {
+  <span class="j">$("body")</span>.toggleClass(<span class="s">"escuro"</span>);
+  <span class="k">const</span> escuro = <span class="j">$("body")</span>.hasClass(<span class="s">"escuro"</span>);
+  $(<span class="k">this</span>).text(escuro ? <span class="s">"☀️ Modo claro"</span> : <span class="s">"🌙 Modo escuro"</span>);
+});</code></pre>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Rodapé ===== -->
+  <footer class="rodape">
+    <div class="container">
+      <div class="rodape-topo">
+        <a href="index.html" class="nav-logo">⚡ jQuery<span>.demo</span></a>
+        <nav class="rodape-nav">
+          <a href="index.html">Demonstração</a>
+          <a href="passos.html">Passo a passo</a>
+        </nav>
+      </div>
+      <hr class="divisor">
+      <p>© 2025 · Projeto educacional — Desenvolvido por <strong>Seu Nome</strong></p>
+      <p class="credito">jQuery é uma biblioteca criada por John Resig em 2006, sob licença MIT.</p>
+    </div>
+  </footer>
+
+  <!-- Botão voltar ao topo -->
+  <a href="#inicio" class="btn-topo" title="Voltar ao topo">↑</a>
+
+  <!-- jQuery + script -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
