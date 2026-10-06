@@ -1,4 +1,4 @@
- //$(document).ready(function () {
+  //$(document).ready(function () {
 
     // 1. MUDAR A FRASE — método .text()
     
@@ -12,15 +12,22 @@
        // $("#painel").slideToggle(400);
    // });
 
+    // 3. TEMA CLARO/ESCURO — .toggleClass() + .hasClass()
    
-    // 3. LISTA DE ITENS — eventos (clique no botão + tecla Enter)
+   // $("#tema").click(function () {
+      //  $("body").toggleClass("escuro");
+      //  const escuro = $("body").hasClass("escuro");
+      //  $(this).text(escuro ? "☀️ Modo claro" : "🌙 Modo escuro");
+   // });
+
+    // 4. LISTA DE ITENS — eventos (clique no botão + tecla Enter)
     
     //$("#btn-add").click(adicionar);
     //$("#item").keydown(function (e) {
     //    if (e.key === "Enter") adicionar();
     //});
     
-    // 4. REMOVER ITEM DA LISTA — delegação de eventos + .fadeOut()
+    // 5. REMOVER ITEM DA LISTA — delegação de eventos + .fadeOut()
     
   // $("#lista").on("click", "li", function () {
   //   $(this).fadeOut(300, function () {
@@ -28,7 +35,7 @@
        // });
    // });
 
-    // 5. FUNÇÃO adicionar() — ação da lista
+    // 6. FUNÇÃO adicionar() — ação da lista
     
     //function adicionar() {
        // const texto = $("#item").val().trim();
@@ -39,7 +46,7 @@
    // }
 //});
 
-    // 6. SAUDAÇÃO — validação + .addClass() / .removeClass()
+    // 7. SAUDAÇÃO — validação + .addClass() / .removeClass()
     
     //$("#btn-ola").click(function () {
        // const nome = $("#nome").val().trim();
@@ -50,16 +57,6 @@
       //  }
   //  });
 
-    
-    // 7. TEMA CLARO/ESCURO — .toggleClass() + .hasClass()
-   
-   // $("#tema").click(function () {
-      //  $("body").toggleClass("escuro");
-      //  const escuro = $("body").hasClass("escuro");
-      //  $(this).text(escuro ? "☀️ Modo claro" : "🌙 Modo escuro");
-   // });
-
-    
     // 8. COPIAR CÓDIGO — Clipboard API + Promises
    
    // $(".btn-copiar").click(function () {
